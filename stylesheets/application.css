@@ -1,0 +1,9 @@
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vw;
+  font-size: 75px;
+  color: green;
+}
