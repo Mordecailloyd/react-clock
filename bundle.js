@@ -20018,9 +20018,9 @@ var Time = function (_Component) {
     _this.timeChange = _this.timeChange.bind(_this);
 
     _this.state = {
-      hour: _this.dateTime.getHours(),
+      second: _this.dateTime.getSeconds(),
       minute: _this.dateTime.getMinutes(),
-      second: _this.dateTime.getSeconds()
+      hour: _this.dateTime.getHours()
     };
 
     _this.fiveSecTick();
@@ -20053,11 +20053,14 @@ var Time = function (_Component) {
         _react2.default.createElement(
           "div",
           { className: "time-detail" },
-          this.state.hour <= 12 ? this.state.hour : this.state.hour - 12,
+          this.state.hour <= 9 ? "0" + this.state.hour : this.state.hour,
           ":",
           this.state.minute <= 9 ? "0" + this.state.minute : this.state.minute,
           ":",
-          this.state.second <= 9 ? 0 + this.state.second : this.state.second,
+          this.state.second <= 9 ? "0" + this.state.second : this.state.second,
+          " ",
+          ' ',
+          " ",
           this.state.hour <= 12 ? "AM" : "PM"
         )
       );
